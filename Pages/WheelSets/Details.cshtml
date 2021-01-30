@@ -1,0 +1,31 @@
+﻿@page
+@model VehicleShowroom.Pages.WheelSets.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>WheelSet</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WheelSet.BrandName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WheelSet.BrandName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WheelSet.WheelSize)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WheelSet.WheelSize.SizeName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.WheelSet.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
